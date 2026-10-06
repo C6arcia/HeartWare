@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="HeartWare Utah postpartum resource directory. Find verified mental-health, food, childcare, breastfeeding, safety, and practical support resources.">
+  <title>HeartWare | Utah Postpartum Resources</title>
+  <style>
+    :root { color-scheme: light; --ink:#1d2939; --muted:#52606d; --brand:#8b3558; --soft:#fff5f8; --line:#eadde2; }
+    body { margin:0; background:#fffafb; color:var(--ink); font:16px/1.55 system-ui,-apple-system,Segoe UI,sans-serif; }
+    main { max-width:980px; margin:auto; padding:40px 20px 64px; }
+    h1 { color:var(--brand); line-height:1.15; } h2 { margin-top:36px; } a { color:#7a2248; }
+    .notice, .card { background:#fff; border:1px solid var(--line); border-radius:12px; padding:18px; margin:14px 0; }
+    .notice { background:var(--soft); } .grid { display:grid; gap:12px; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); }
+    input { box-sizing:border-box; width:100%; padding:11px; border:1px solid #b7a3ad; border-radius:8px; font:inherit; }
+    .tag { display:inline-block; padding:2px 8px; margin:5px 5px 0 0; background:#f5e8ed; border-radius:99px; font-size:.85rem; }
+    .muted { color:var(--muted); } .contact { margin-top:8px; font-size:.92rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>HeartWare Utah Postpartum Resources</h1>
+    <p>Verified Utah resources for mothers during the postpartum period.<p>
+    <p><strong>This page is not medical advice and does NOT replace emergency or clinical care.</strong></p>
+
+    <section class="notice" aria-label="Emergency support">
+      <strong>Immediate Safety:</strong> If you or your baby are in immediate danger, call <strong>911</strong>. Call or text <strong>988</strong> for crisis support. Pregnant and postpartum individuals can also call or text the National Maternal Mental Health Hotline at <strong>1-833-TLC-MAMA (1-833-852-6262)</strong>.
+    </section>
+
+    <h2>Types of Support</h2>
+    <div class="grid">
+      <div class="card">Perinatal and postpartum mental-health support</div>
+      <div class="card">Postpartum health, breastfeeding, and specialized support</div>
+      <div class="card">Food, benefits, diapers, and practical-needs navigation</div>
+      <div class="card">Childcare, respite, and parenting support</div>
+      <div class="card">Relationship education and relationship safety</div>
+      <div class="card">Legal, home-visiting, and statewide referral help</div>
+    </div>
+
+    <h2>Find a Resource</h2>
+    <p class="muted">Search by need, organization, or service. Confirm current availability and eligibility with the organization.</p>
+    <label for="search">Search the directory</label>
+    <input id="search" type="search" placeholder="Examples: anxiety, diapers, childcare, breastfeeding, housing">
+    <div id="status" class="muted" role="status"></div>
+    <div id="resource-list" aria-live="polite"></div>
+
+    <h2>Data and updates</h2>
+    <p>The source of truth is the versioned <a href="data/utah_postpartum_mother_resources.json">HeartWare resource JSON</a>. 
+    <p>HeartWare uses this directory to connect Utah mothers with relevant and verified support. Resource details, safety guidance, and optional screening pathways are reviewed and updated as needed.</p>
+
+  <script>
+    const list = document.getElementById('resource-list');
+    const status = document.getElementById('status');
+    const search = document.getElementById('search');
+    let resources = [];
+    const text = value => Array.isArray(value) ? value.join(' ') : (value || '');
+    const escapeHtml = value => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[char]));
+
+    function render(query = '') {
+      const normalized = query.trim().toLowerCase();
+      const matches = resources.filter(resource => {
+        const searchable = [resource.organization, resource.program, text(resource.specializes_in), resource.services, resource.eligibility].join(' ').toLowerCase();
+        return !normalized || searchable.includes(normalized);
+      });
+      status.textContent = `${matches.length} resource${matches.length === 1 ? '' : 's'} found`;
+      list.innerHTML = matches.map(resource => {
+        const phone = Object.values(resource.contact || {}).filter(value => typeof value === 'string' && /\d/.test(value)).join(' · ');
+        const website = resource.contact && (resource.contact.website || resource.contact.application_portal);
+        return `<article class="card"><h3>${escapeHtml(resource.organization)}</h3><strong>${escapeHtml(resource.program)}</strong><p>${escapeHtml(resource.services)}</p><div>${(resource.specializes_in || []).map(tag => `<span class="tag">${escapeHtml(tag)}</span>`).join('')}</div><p class="contact"><strong>How to connect:</strong> ${escapeHtml(resource.how_to_connect || 'Contact the organization for details.')} ${phone ? `<br><strong>Phone/text:</strong> ${escapeHtml(phone)}` : ''} ${website ? `<br><a href="${escapeHtml(website)}" rel="noopener">Visit resource website</a>` : ''}</p></article>`;
+      }).join('') || '<p class="notice">No exact match. Try a broader term or contact 211 Utah for local assistance.</p>';
+    }
+
+    fetch('data/utah_postpartum_mother_resources.json')
+      .then(response => { if (!response.ok) throw new Error('Directory unavailable'); return response.json(); })
+      .then(data => { resources = data.resources || []; render(); })
+      .catch(() => { status.textContent = 'The directory could not be loaded. Please use the JSON link above or try again later.'; });
+    search.addEventListener('input', event => render(event.target.value));
+  </script>
+</body>
+</html>
