@@ -20,13 +20,14 @@
 <body>
   <main>
     <h1>HeartWare Utah Postpartum Resources</h1>
-    <p>Verified Utah resources for mothers during pregnancy and the postpartum period. This page is a public reference; it is not medical advice and does not replace emergency or clinical care.</p>
+    <p>Verified Utah resources for mothers during the postpartum period.<p>
+      <strong>This page is not medical advice and does not replace emergency or clinical care.<strong>
 
     <section class="notice" aria-label="Emergency support">
-      <strong>Immediate safety:</strong> If you or your baby are in immediate danger, call 911. Call or text <strong>988</strong> for crisis support. Pregnant and postpartum individuals can also call or text the National Maternal Mental Health Hotline at <strong>1-833-TLC-MAMA (1-833-852-6262)</strong>.
+      <strong>Immediate Safety:</strong> If you or your baby are in immediate danger, call <strong>911</strong>. Call or text <strong>988</strong> for crisis support. Pregnant and postpartum individuals can also call or text the National Maternal Mental Health Hotline at <strong>1-833-TLC-MAMA (1-833-852-6262)</strong>.
     </section>
 
-    <h2>Types of support</h2>
+    <h2>Types of Support</h2>
     <div class="grid">
       <div class="card">Perinatal and postpartum mental-health support</div>
       <div class="card">Postpartum health, breastfeeding, and specialized support</div>
@@ -36,16 +37,16 @@
       <div class="card">Legal, home-visiting, and statewide referral help</div>
     </div>
 
-    <h2>Find a resource</h2>
-    <p class="muted">Search by need, organization, or service. Confirm current availability and eligibility with the organization before referring someone.</p>
+    <h2>Find a Resource</h2>
+    <p class="muted">Search by need, organization, or service. Confirm current availability and eligibility with the organization.</p>
     <label for="search">Search the directory</label>
     <input id="search" type="search" placeholder="Examples: anxiety, diapers, childcare, breastfeeding, housing">
     <div id="status" class="muted" role="status"></div>
     <div id="resource-list" aria-live="polite"></div>
 
     <h2>Data and updates</h2>
-    <p>The source of truth is the versioned <a href="data/utah_postpartum_mother_resources.json">HeartWare resource JSON</a>. The directory includes matching, safety, and optional screening-routing configuration for the HeartWare chatbot.</p>
-  </main>
+    <p>The source of truth is the versioned <a href="data/utah_postpartum_mother_resources.json">HeartWare resource JSON</a>. 
+    <p>HeartWare uses this directory to connect Utah mothers with relevant and verified support. Resource details, safety guidance, and optional screening pathways are reviewed and updated as needed.</p>
 
   <script>
     const list = document.getElementById('resource-list');
