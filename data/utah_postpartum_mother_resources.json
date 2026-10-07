@@ -47,7 +47,7 @@
       {"service_type": "Perinatal and postpartum mental health support", "need_tags": ["postpartum_mental_health"], "care_level": "peer_support", "default_access_tags": ["utah", "mental_health"]},
       {"service_type": "Postpartum adjustment, health, and specialized support", "need_tags": ["breastfeeding"], "care_level": "education_and_support", "default_access_tags": ["utah", "postpartum"]},
       {"service_type": "Food, benefits, and practical-needs navigation", "need_tags": ["food", "navigation"], "care_level": "practical", "default_access_tags": ["utah"]},
-      {"service_type": "Childcare, respite, and parenting support", "need_tags": ["childcare", "respite, developmental_concerns"], "care_level": "practical", "default_access_tags": ["utah"]},
+      {"service_type": "Childcare, respite, and parenting support", "need_tags": ["childcare", "respite", "developmental_concerns"], "care_level": "practical", "default_access_tags": ["utah"]},
       {"service_type": "Relationship education and family well-being", "need_tags": ["relationship_support"], "care_level": "education_and_support", "default_access_tags": ["free", "utah"]},
       {"service_type": "Relationship safety and domestic-violence support", "need_tags": ["relationship_safety"], "care_level": "crisis_and_safety", "default_access_tags": ["free", "confidential", "24_7", "utah"]}
     ],
