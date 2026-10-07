@@ -163,8 +163,7 @@
       "cost": "Free",
       "eligibility": "Utah parents during pregnancy and families with children from birth through age 8.",
       "how_to_connect": "Call Help Me Grow Utah for care coordination, developmental screening, or referrals. Explain the support you need for yourself or your child.",
-      "contact": {"phone": "801-691-5322"},
-      "website": "https://helpmegrowutah.org",
+      "contact": {"phone": "801-691-5322", "website": "https://helpmegrowutah.org"},
       "source_urls": ["https://mihp.utah.gov/patient-screening-and-referral-resources", "https://mihp.utah.gov/maternal-resource-guide-utah/accessible-healthcare"],
       "availability_verified": "2026-10-07"
     },
