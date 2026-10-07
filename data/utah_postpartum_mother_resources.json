@@ -48,7 +48,6 @@
       {"service_type": "Postpartum adjustment, health, and specialized support", "need_tags": ["breastfeeding"], "care_level": "education_and_support", "default_access_tags": ["utah", "postpartum"]},
       {"service_type": "Food, benefits, and practical-needs navigation", "need_tags": ["food", "navigation"], "care_level": "practical", "default_access_tags": ["utah"]},
       {"service_type": "Childcare, respite, and parenting support", "need_tags": ["childcare", "respite", "developmental_concerns"], "care_level": "practical", "default_access_tags": ["utah"]},
-      {"service_type": "Relationship education and family well-being", "need_tags": ["relationship_support"], "care_level": "education_and_support", "default_access_tags": ["free", "utah"]},
       {"service_type": "Relationship safety and domestic-violence support", "need_tags": ["relationship_safety"], "care_level": "crisis_and_safety", "default_access_tags": ["free", "confidential", "24_7", "utah"]}
     ],
     "resource_matching_overrides": [
@@ -70,7 +69,6 @@
       {"organization": "Utah Department of Workforce Services", "program": "SNAP, Financial, Medical, and Child Care Assistance", "care_level": "benefits", "add_need_tags": ["food", "childcare", "health_coverage"], "access_tags": ["income_based", "statewide"], "priority_adjustment": 10},
       {"organization": "Care About Childcare Utah", "program": "Utah Childcare Provider Search", "care_level": "navigation", "add_need_tags": ["childcare", "navigation"], "access_tags": ["statewide"], "priority_adjustment": 10},
       {"organization": "Family Support Centers of Utah", "program": "Crisis and Respite Nurseries, Parenting Education, and Family Support", "care_level": "practical", "add_need_tags": ["childcare", "respite"], "access_tags": ["free", "24_7"], "priority_adjustment": 15},
-      {"organization": "Utah State University Extension", "program": "Healthy Relationships Utah", "care_level": "education_and_support", "add_need_tags": ["relationship_support"], "access_tags": ["free", "online", "in_person"], "priority_adjustment": 12},
       {"organization": "Utah Domestic Violence Coalition", "program": "LINKLine", "care_level": "crisis_and_safety", "add_need_tags": ["relationship_safety"], "access_tags": ["free", "confidential", "24_7", "phone", "text"], "priority_adjustment": 100},
       {"organization": "Utah Medicaid", "program": "Pregnant Woman Program: 12-Month Postpartum Coverage", "care_level": "benefits", "add_need_tags": ["health_coverage"], "access_tags": ["income_based", "statewide"], "priority_adjustment": 15},
       {"organization": "Utah Legal Services", "program": "Free Civil Legal Help and Referral", "care_level": "legal", "add_need_tags": ["legal", "relationship_safety"], "access_tags": ["free", "income_based", "statewide"], "priority_adjustment": 12},
@@ -194,45 +192,6 @@
       "contact": {"clinical_services_phone": "801-585-1565", "mindfulness_class_phone": "801-585-7325", "website": "https://healthcare.utah.edu/hmhi/treatments/perinatal-mental-health"},
       "source_urls": ["https://healthcare.utah.edu/hmhi/treatments/perinatal-mental-health"],
       "availability_verified": "Current official service page indexed 2026-10-07."
-    },
-    {
-      "organization": "New Beginnings Behavioral Health",
-      "program": "Free Postpartum Support Group",
-      "specializes_in": ["postpartum support", "behavioral health"],
-      "services": "Postpartum support group listed by PSI Utah.",
-      "format_and_location": "In person at the office in American Fork, Utah; PSI Utah lists the first and third Wednesday, noon–1:00 p.m.",
-      "cost": "Free",
-      "eligibility": "Postpartum mothers; registration or other eligibility requirements are not stated.",
-      "how_to_connect": "Call to confirm the current schedule and register.",
-      "contact": {"phone": "801-683-6830", "website": "https://newbeginningstreatment.com"},
-      "source_urls": ["https://www.psiutah.org/support-groups"],
-      "availability_verified": "Listed on PSI Utah’s current support-groups page indexed 2026-10-05."
-    },
-    {
-      "organization": "Roots and Branches Wellness",
-      "program": "Perinatal Education and Support Group",
-      "specializes_in": ["perinatal education", "perinatal peer support"],
-      "services": "Perinatal education and support group.",
-      "format_and_location": "Lehi, Utah; PSI Utah lists Thursdays, 7:30–8:30 p.m.",
-      "cost": "Not stated",
-      "eligibility": "Perinatal participants; registration requested. No other eligibility requirement stated.",
-      "how_to_connect": "Call or email for current information and registration.",
-      "contact": {"phone": "385-352-3251", "email": "hello@rootsbrancheswellness.com", "website": "https://www.rootsbrancheswellness.com"},
-      "source_urls": ["https://www.psiutah.org/support-groups"],
-      "availability_verified": "Listed on PSI Utah’s current support-groups page indexed 2026-10-05."
-    },
-    {
-      "organization": "Treat Counseling",
-      "program": "Free Pregnancy and Postpartum Support Group",
-      "specializes_in": ["pregnancy and postpartum mental health", "perinatal therapy"],
-      "services": "Open support group facilitated by two therapists specializing in perinatal mental health; includes an evidence-based pregnancy and postpartum mental-health workbook.",
-      "format_and_location": "PSI Utah lists Tuesday evenings at 7:00 p.m.; delivery format is not stated.",
-      "cost": "Free",
-      "eligibility": "Open to everyone; participants may join at any time.",
-      "how_to_connect": "Call for current details.",
-      "contact": {"phone": "801-872-3234", "website": "https://treatcounseling.com"},
-      "source_urls": ["https://www.psiutah.org/support-groups"],
-      "availability_verified": "Listed on PSI Utah’s current support-groups page indexed 2026-10-05."
     },
     {
       "organization": "Postpartum Support International (PSI)",
@@ -402,19 +361,6 @@
       "contact": {"network_phone": "385-343-8155", "after_hours_crisis_nursery": "801-635-8510", "website": "https://www.utahfamilies.org/our-centers"},
       "source_urls": ["https://www.utahfamilies.org/resources/", "https://www.utahfamilies.org/services/", "https://familysupportcenter.org/services/crisis-nurseries", "https://familysupportcenter.org/get-help"],
       "availability_verified": "Current Family Support Center pages indexed 2026-09-21 through 2026-10-03."
-    },
-    {
-      "organization": "Utah State University Extension",
-      "program": "Healthy Relationships Utah",
-      "specializes_in": ["relationship education", "communication skills", "conflict management", "family-strengthening"],
-      "services": "Free research-based relationship education workshops and resources for individuals, couples, and families. Topics include communication, relationship skills, and family bonds; online and in-person options vary by course.",
-      "format_and_location": "Workshops throughout Utah and online options, depending on the course.",
-      "cost": "Free",
-      "eligibility": "Individuals, couples, and families. Course-specific participation requirements and registration may apply.",
-      "how_to_connect": "Review available courses and register for a class that fits the mother's or family's needs.",
-      "contact": {"website": "https://extension.usu.edu/hru/"},
-      "source_urls": ["https://mihp.utah.gov/mmh-parent-resources", "https://extension.usu.edu/hru/", "https://extension.usu.edu/hru/courses/"],
-      "availability_verified": "Current USU Extension pages indexed 2026-10-05."
     },
     {
       "organization": "Utah Domestic Violence Coalition",
@@ -593,9 +539,6 @@
       "resources": [
         {"organization": "The Healing Group", "program": "Free Postpartum Support Group"},
         {"organization": "Huntsman Mental Health Institute, University of Utah Health", "program": "Perinatal Mental Health Services and Virtual Perinatal Mindfulness Drop-In Class"},
-        {"organization": "New Beginnings Behavioral Health", "program": "Free Postpartum Support Group"},
-        {"organization": "Roots and Branches Wellness", "program": "Perinatal Education and Support Group"},
-        {"organization": "Treat Counseling", "program": "Free Pregnancy and Postpartum Support Group"},
         {"organization": "Postpartum Support International (PSI)", "program": "Perinatal Mood Support for Moms and Birthing People"},
         {"organization": "Postpartum Support International (PSI)", "program": "PSI HelpLine"},
         {"organization": "Postpartum Support International Utah (PSI Utah)", "program": "Utah Support Groups Directory"},
@@ -640,13 +583,6 @@
         {"organization": "Care About Childcare Utah", "program": "Utah Childcare Provider Search"},
         {"organization": "Family Support Centers of Utah", "program": "Crisis and Respite Nurseries, Parenting Education, and Family Support"},
         {"organization": "Help Me Grow Utah", "program": "Care Coordination, Developmental Screening, and Resource Referral"}
-      ]
-    },
-    {
-      "service_type": "Relationship education and family well-being",
-      "description": "Free relationship and communication education for individuals, couples, and families.",
-      "resources": [
-        {"organization": "Utah State University Extension", "program": "Healthy Relationships Utah"}
       ]
     },
     {
