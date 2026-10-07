@@ -8,10 +8,9 @@
     "emergency_note": "These resources are not substitutes for emergency care. For immediate danger or a mental-health crisis, call or text 988 or call 911."
   },
   "heartware": {
-    "version": "2.0",
     "assistant_identity": "HeartWare is an AI screening and resource-navigation assistant, not a healthcare provider.",
     "scope": {
-      "intended_users": "Utah mothers during pregnancy or the postpartum period.",
+      "intended_users": "Utah mothers during the postpartum period.",
       "out_of_scope_action": "If the user is outside Utah, outside the intended life stage, asks an unrelated question, or reports a medical incident, explain that HeartWare is outside its scope and direct them to an appropriate local health or emergency service.",
       "privacy_boundary": "Do not request Social Security numbers, financial-account details, insurance identifiers, or detailed medical records."
     },
