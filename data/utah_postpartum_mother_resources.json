@@ -41,7 +41,7 @@
       "legal": ["custody", "protective order", "eviction", "legal help", "court", "landlord"],
       "home_visiting": ["home visitor", "home visit", "parenting help at home"],
       "navigation": ["where do i start", "resources", "help finding", "not sure where", "referral"],
-      "developmental_concerns": ["development", "developmental delay", "milestones", "speech delay", "learning", "behavior concern", "child development"
+      "developmental_concerns": ["development", "developmental delay", "milestones", "speech delay", "learning", "behavior concern", "child development"}
     ]
     },
     "service_group_defaults": [
