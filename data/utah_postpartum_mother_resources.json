@@ -11,7 +11,7 @@
     "version": "2.0",
     "assistant_identity": "HeartWare is an AI screening and resource-navigation assistant, not a healthcare provider.",
     "scope": {
-      "intended_users": "Utah mothers during the postpartum period.",
+      "intended_users": "Utah mothers during pregnancy or the postpartum period.",
       "out_of_scope_action": "If the user is outside Utah, outside the intended life stage, asks an unrelated question, or reports a medical incident, explain that HeartWare is outside its scope and direct them to an appropriate local health or emergency service.",
       "privacy_boundary": "Do not request Social Security numbers, financial-account details, insurance identifiers, or detailed medical records."
     },
@@ -73,8 +73,8 @@
       {"organization": "Utah Medicaid", "program": "Pregnant Woman Program: 12-Month Postpartum Coverage", "care_level": "benefits", "add_need_tags": ["health_coverage"], "access_tags": ["income_based", "statewide"], "priority_adjustment": 15},
       {"organization": "Utah Legal Services", "program": "Free Civil Legal Help and Referral", "care_level": "legal", "add_need_tags": ["legal", "relationship_safety"], "access_tags": ["free", "income_based", "statewide"], "priority_adjustment": 12},
       {"organization": "Utah Department of Health and Human Services", "program": "Utah Home Visiting Program", "care_level": "home_based_support", "add_need_tags": ["home_visiting", "navigation"], "access_tags": ["free"], "priority_adjustment": 10},
-      {"organization": "Utah Department of Health and Human Services", "program": "Maternal Resource Guide", "care_level": "navigation", "add_need_tags": ["food", "diapers", "childcare", "relationship_safety", "legal", "navigation"], "access_tags": ["free", "english", "spanish", "statewide"], "priority_adjustment": 5}
       {"organization": "Help Me Grow Utah", "program": "Care Coordination, Developmental Screening, and Resource Referral", "care_level": "navigation", "add_need_tags": ["navigation", "developmental_concerns", "postpartum_mental_health"], "access_tags": ["free", "statewide", "phone", "english", "spanish"], "priority_adjustment": 10},
+      {"organization": "Utah Department of Health and Human Services", "program": "Maternal Resource Guide", "care_level": "navigation", "add_need_tags": ["food", "diapers", "childcare", "relationship_safety", "legal", "navigation"], "access_tags": ["free", "english", "spanish", "statewide"], "priority_adjustment": 5}
     ],
     "safety_protocol": {
       "activation_signals": ["direct or indirect self-harm or suicide language", "harm to baby", "psychosis", "severe confusion", "immediate danger", "inability to stay safe", "EPDS item 10 score greater than 0"],
@@ -589,7 +589,6 @@
         {"organization": "Utah Medicaid", "program": "Pregnant Woman Program: 12-Month Postpartum Coverage"},
         {"organization": "La Leche League Utah and Idaho", "program": "Breastfeeding Help and Support"},
         {"organization": "Utah Breastfeeding Coalition", "program": "Breastfeeding Support Resource Directory"}
-        {"organization": "Help Me Grow Utah", "program": "Care Coordination, Developmental Screening, and Resource Referral"}
       ]
     },
     {
@@ -606,10 +605,11 @@
     },
     {
       "service_type": "Childcare, respite, and parenting support",
-      "description": "Childcare-provider search, help paying for care, short-term respite, and parenting education.",
+      "description": "Childcare-provider search, help paying for care, short-term respite, parenting education, and developmental-support navigation.",
       "resources": [
         {"organization": "Care About Childcare Utah", "program": "Utah Childcare Provider Search"},
-        {"organization": "Family Support Centers of Utah", "program": "Crisis and Respite Nurseries, Parenting Education, and Family Support"}
+        {"organization": "Family Support Centers of Utah", "program": "Crisis and Respite Nurseries, Parenting Education, and Family Support"},
+        {"organization": "Help Me Grow Utah", "program": "Care Coordination, Developmental Screening, and Resource Referral"}
       ]
     },
     {
@@ -633,3 +633,4 @@
     "The Emily Effect's 2016 support-group page was not used as a standalone source for current schedules. A group was included only when its current provider or PSI Utah listing verified availability."
   ]
 }
+
