@@ -41,6 +41,8 @@
       "legal": ["custody", "protective order", "eviction", "legal help", "court", "landlord"],
       "home_visiting": ["home visitor", "home visit", "parenting help at home"],
       "navigation": ["where do i start", "resources", "help finding", "not sure where", "referral"]
+      "developmental_concerns": ["development", "developmental delay", "milestones", "speech delay", "learning", "behavior concern", "child development"
+],
     },
     "service_group_defaults": [
       {"service_type": "Perinatal and postpartum mental health support", "need_tags": ["postpartum_mental_health"], "care_level": "peer_support", "default_access_tags": ["utah", "mental_health"]},
@@ -73,6 +75,7 @@
       {"organization": "Utah Legal Services", "program": "Free Civil Legal Help and Referral", "care_level": "legal", "add_need_tags": ["legal", "relationship_safety"], "access_tags": ["free", "income_based", "statewide"], "priority_adjustment": 12},
       {"organization": "Utah Department of Health and Human Services", "program": "Utah Home Visiting Program", "care_level": "home_based_support", "add_need_tags": ["home_visiting", "navigation"], "access_tags": ["free"], "priority_adjustment": 10},
       {"organization": "Utah Department of Health and Human Services", "program": "Maternal Resource Guide", "care_level": "navigation", "add_need_tags": ["food", "diapers", "childcare", "relationship_safety", "legal", "navigation"], "access_tags": ["free", "english", "spanish", "statewide"], "priority_adjustment": 5}
+      {"organization": "Help Me Grow Utah", "program": "Care Coordination, Developmental Screening, and Resource Referral", "care_level": "navigation", "add_need_tags": ["navigation", "developmental_concerns", "postpartum_mental_health"], "access_tags": ["free", "statewide", "phone", "english", "spanish"], "priority_adjustment": 10},
     ],
     "safety_protocol": {
       "activation_signals": ["direct or indirect self-harm or suicide language", "harm to baby", "psychosis", "severe confusion", "immediate danger", "inability to stay safe", "EPDS item 10 score greater than 0"],
@@ -152,6 +155,20 @@
     "matching_process": ["Apply safety_protocol before all other steps.", "Confirm the user is within HeartWare scope.", "Extract stated needs with need_detection and gather only relevant missing context.", "Offer screening only when indicated and consented to; apply screening routing only to complete scores.", "Score resources by need match, urgency/care-level fit, eligibility or access fit, and stated preferences.", "Use the service-group default, then merge any matching resource-specific override.", "Explain why each returned resource fits. Do not use scores to diagnose or determine clinical urgency."]
   },
   "resources": [
+    {
+      "organization": "Help Me Grow Utah",
+      "program": "Care Coordination, Developmental Screening, and Resource Referral",
+      "specializes_in": ["child development", "developmental screening", "care coordination", "parenting support", "maternal mental-health referral"],
+      "services": "Free care coordination and resource referral for Utah families. Offers developmental screening, pregnancy and parenting information, community-resource connections, and referral support for maternal mental-health providers.",
+      "format_and_location": "Statewide Utah service; phone and online support.",
+      "cost": "Free",
+      "eligibility": "Utah parents during pregnancy and families with children from birth through age 8.",
+      "how_to_connect": "Call Help Me Grow Utah for care coordination, developmental screening, or referrals. Explain the support you need for yourself or your child.",
+      "contact": {"phone": "801-691-5322"},
+      "website": "https://helpmegrowutah.org",
+      "source_urls": ["https://mihp.utah.gov/patient-screening-and-referral-resources", "https://mihp.utah.gov/maternal-resource-guide-utah/accessible-healthcare"],
+      "availability_verified": "2026-10-07"
+    },
     {
       "organization": "The Healing Group",
       "program": "Free Postpartum Support Group",
