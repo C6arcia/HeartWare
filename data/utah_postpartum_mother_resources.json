@@ -8,6 +8,7 @@
     "emergency_note": "These resources are not substitutes for emergency care. For immediate danger or a mental-health crisis, call or text 988 or call 911."
   },
   "heartware": {
+    "version": "2.0",
     "assistant_identity": "HeartWare is an AI screening and resource-navigation assistant, not a healthcare provider.",
     "scope": {
       "intended_users": "Utah mothers during the postpartum period.",
@@ -51,14 +52,16 @@
       {"service_type": "Relationship safety and domestic-violence support", "need_tags": ["relationship_safety"], "care_level": "crisis_and_safety", "default_access_tags": ["free", "confidential", "24_7", "utah"]}
     ],
     "resource_matching_overrides": [
-      {"organization": "Huntsman Mental Health Institute, University of Utah Health", "program": "Perinatal Mental Health Services and Free Perinatal Support Group", "care_level": "clinical", "add_need_tags": ["postpartum_mental_health", "navigation"], "priority_adjustment": 8},
+      {"organization": "Huntsman Mental Health Institute, University of Utah Health", "program": "Perinatal Mental Health Services and Virtual Perinatal Mindfulness Drop-In Class", "care_level": "clinical", "add_need_tags": ["postpartum_mental_health", "navigation"], "priority_adjustment": 8},
       {"organization": "Huntsman Mental Health Institute, University of Utah Health", "program": "Nest Intensive Outpatient Program", "care_level": "higher_acuity_clinical", "add_need_tags": ["postpartum_mental_health"], "priority_adjustment": 15},
       {"organization": "Postpartum Support International (PSI)", "program": "PSI HelpLine", "care_level": "navigation", "add_need_tags": ["postpartum_mental_health", "navigation"], "access_tags": ["free", "phone", "text", "english", "spanish"], "priority_adjustment": 10},
       {"organization": "Utah Department of Health and Human Services", "program": "Utah Maternal Mental Health Referral Network", "care_level": "navigation", "add_need_tags": ["postpartum_mental_health", "navigation"], "access_tags": ["statewide"], "priority_adjustment": 10},
       {"organization": "Health Resources and Services Administration (HRSA)", "program": "National Maternal Mental Health Hotline", "care_level": "urgent_support", "add_need_tags": ["postpartum_mental_health", "navigation"], "access_tags": ["free", "24_7", "phone", "text", "english", "spanish"], "priority_adjustment": 12},
       {"organization": "988 Suicide & Crisis Lifeline", "program": "24/7 Crisis Support", "care_level": "crisis", "add_need_tags": ["postpartum_mental_health"], "access_tags": ["free", "24_7", "phone", "text"], "priority_adjustment": 100},
+      {"organization": "Huntsman Mental Health Institute (HMHI)", "program": "Mobile Crisis Outreach Teams (MCOT)", "care_level": "crisis", "add_need_tags": ["postpartum_mental_health"], "access_tags": ["free", "24_7", "phone", "in_person", "virtual", "utah"], "priority_adjustment": 90},
+      {"organization": "Huntsman Mental Health Institute (HMHI)", "program": "Utah Warm Line", "care_level": "peer_support", "add_need_tags": ["postpartum_mental_health"], "access_tags": ["free", "phone", "peer_support", "utah"], "priority_adjustment": 7},
       {"organization": "Utah Women, Infants, and Children (WIC)", "program": "Utah WIC Program", "care_level": "practical", "add_need_tags": ["food", "breastfeeding"], "access_tags": ["free", "income_based", "statewide"], "priority_adjustment": 12},
-      {"organization": "Intermountain Health", "program": "Beyond Birth: 4th Trimester Support", "care_level": "peer_support", "add_need_tags": ["postpartum_mental_health", "breastfeeding"], "access_tags": ["free", "online", "in_person"], "priority_adjustment": 7},
+      {"organization": "Intermountain Health", "program": "Behavioral Health Navigation", "care_level": "navigation", "add_need_tags": ["postpartum_mental_health", "navigation", "relationship_support"], "access_tags": ["phone", "utah"], "priority_adjustment": 8},
       {"organization": "MotherToBaby", "program": "Medication and Exposure Information Service", "care_level": "specialized_information", "add_need_tags": ["breastfeeding"], "access_tags": ["free", "phone", "text"], "priority_adjustment": 8},
       {"organization": "La Leche League Utah and Idaho", "program": "Breastfeeding Help and Support", "care_level": "peer_support", "add_need_tags": ["breastfeeding"], "access_tags": ["peer_support"], "priority_adjustment": 8},
       {"organization": "Utah Breastfeeding Coalition", "program": "Breastfeeding Support Resource Directory", "care_level": "navigation", "add_need_tags": ["breastfeeding", "navigation"], "priority_adjustment": 6},
@@ -129,7 +132,7 @@
       "screening_routing": {
         "positive_epds_or_moderate_gad_7": [
           {"organization": "Utah Department of Health and Human Services", "program": "Utah Maternal Mental Health Referral Network"},
-          {"organization": "Huntsman Mental Health Institute, University of Utah Health", "program": "Perinatal Mental Health Services and Free Perinatal Support Group"},
+          {"organization": "Huntsman Mental Health Institute, University of Utah Health", "program": "Perinatal Mental Health Services and Virtual Perinatal Mindfulness Drop-In Class"},
           {"organization": "Postpartum Support International (PSI)", "program": "PSI HelpLine"}
         ],
         "high_epds_or_severe_gad_7": [
@@ -181,16 +184,16 @@
     },
     {
       "organization": "Huntsman Mental Health Institute, University of Utah Health",
-      "program": "Perinatal Mental Health Services and Free Perinatal Support Group",
+      "program": "Perinatal Mental Health Services and Virtual Perinatal Mindfulness Drop-In Class",
       "specializes_in": ["perinatal mood and anxiety disorders", "postpartum depression", "birth trauma", "pregnancy loss", "reproductive mental health"],
-      "services": "Counseling, psychiatric care, and support for perinatal mental-health needs. PSI Utah lists a free virtual perinatal support group on the second and fourth Wednesday, noon–1:00 p.m.",
-      "format_and_location": "Clinical services in Salt Lake City; listed support group is virtual.",
-      "cost": "Support group: free. Clinical-service cost and insurance information are not stated in the source.",
-      "eligibility": "Women with perinatal mental-health needs, including during the postpartum period; group registration required. No other eligibility requirement stated.",
-      "how_to_connect": "Call or email for an evaluation, group information, or registration.",
-      "contact": {"phone": "801-585-1565", "email": "maternalmentalhealth@hsc.utah.edu", "website": "https://healthcare.utah.edu/hmhi/treatments/perinatal-mental-health"},
-      "source_urls": ["https://www.psiutah.org/support-groups", "https://healthcare.utah.edu/hmhi/treatments/perinatal-mental-health"],
-      "availability_verified": "Current official service page indexed 2026-10-03; PSI Utah group listing indexed 2026-10-05."
+      "services": "Counseling, psychiatric care, outpatient therapy, medication management, and support for perinatal mental-health needs. The virtual mindfulness drop-in class offers a 30-minute guided mindfulness practice and gentle community support; it is not intended to diagnose or treat health conditions.",
+      "format_and_location": "Outpatient clinics at Downtown Behavioral Health Clinic and Farmington Behavioral Health Clinic. Virtual mindfulness class: Mondays, 12–12:30 p.m.; registered participants receive a Zoom link before the session.",
+      "cost": "The clinical program accepts most commercial insurance and offers self-pay rates. The page does not state a cost for the mindfulness class.",
+      "eligibility": "Women seeking perinatal mental-health services. The mindfulness class welcomes people trying to conceive, adopting, pregnant, postpartum, or navigating pregnancy loss; reservation is required.",
+      "how_to_connect": "Call 801-585-1565 for an evaluation or clinical-service information. Call 801-585-7325 to reserve a place in the virtual mindfulness class.",
+      "contact": {"clinical_services_phone": "801-585-1565", "mindfulness_class_phone": "801-585-7325", "website": "https://healthcare.utah.edu/hmhi/treatments/perinatal-mental-health"},
+      "source_urls": ["https://healthcare.utah.edu/hmhi/treatments/perinatal-mental-health"],
+      "availability_verified": "Current official service page indexed 2026-10-07."
     },
     {
       "organization": "New Beginnings Behavioral Health",
@@ -285,16 +288,16 @@
     },
     {
       "organization": "Intermountain Health",
-      "program": "Beyond Birth: 4th Trimester Support",
-      "specializes_in": ["fourth-trimester support", "maternal mental health", "infant sleep", "emotional wellness"],
-      "services": "Support group for new moms and infants with education and discussion about the fourth trimester, including maternal mental health, infant sleep, and emotional wellness.",
-      "format_and_location": "Online and in person; view the event page for available sessions and locations.",
-      "cost": "$0",
-      "eligibility": "New moms and their infants; session-specific registration details are on the event page.",
-      "how_to_connect": "Use the event page to view available sessions and register.",
-      "contact": {"website": "https://intermountainhealthcare.org/classes-events/detail/beyond-birth-4th-trimester-support"},
-      "source_urls": ["https://mihp.utah.gov/mmh-parent-resources", "https://intermountainhealthcare.org/classes-events/detail/beyond-birth-4th-trimester-support"],
-      "availability_verified": "Current official event page indexed 2026-09-05."
+      "program": "Behavioral Health Navigation",
+      "specializes_in": ["behavioral-health navigation", "mental-health resource referral", "anxiety", "depression", "relationship concerns"],
+      "services": "Telephone navigation that helps adults identify and connect with appropriate behavioral-health resources based on their needs.",
+      "format_and_location": "Phone; Intermountain serves Utah and offers virtual behavioral-health options where appropriate.",
+      "cost": "The cost of the navigation call is not stated; costs for referred services may vary.",
+      "eligibility": "Adults seeking behavioral-health navigation; eligibility for a referred service may vary.",
+      "how_to_connect": "Call the Behavioral Health Services Navigation Line. State that you are postpartum and would like help finding behavioral-health support.",
+      "contact": {"phone": "833-442-2211", "website": "https://intermountainhealthcare.org/services/behavioral-health"},
+      "source_urls": ["https://intermountainhealthcare.org/services/behavioral-health/depression", "https://intermountainhealthcare.org/services/behavioral-health"],
+      "availability_verified": "2026-10-07"
     },
     {
       "organization": "Utah Women, Infants, and Children (WIC)",
@@ -544,6 +547,32 @@
       "availability_verified": "Current Utah Breastfeeding Coalition pages indexed 2026-09-21 through 2026-10-02."
     },
     {
+      "organization": "Huntsman Mental Health Institute (HMHI)",
+      "program": "Mobile Crisis Outreach Teams (MCOT)",
+      "specializes_in": ["mental-health crisis response", "in-person crisis support", "virtual crisis support", "follow-up support"],
+      "services": "Fast, free face-to-face or virtual-video crisis response, consultation, follow-up support, and referrals to community mental-health services. Utah Crisis Line dispatch works with teams across Utah; HMHI MCOT primarily serves Salt Lake County.",
+      "format_and_location": "Available statewide through Utah Crisis Line dispatch; in-person or virtual response. Youth and adult teams are available 24/7.",
+      "cost": "Free",
+      "eligibility": "Utah residents experiencing a mental-health challenge; families and others seeking support for a loved one may also call.",
+      "how_to_connect": "Call or text 988 and ask about Mobile Crisis Outreach Team support. Call 911 for immediate danger or a medical emergency.",
+      "contact": {"phone_text": "988", "website": "https://healthcare.utah.edu/hmhi/programs/crisis-diversion"},
+      "source_urls": ["https://healthcare.utah.edu/hmhi/programs/crisis-diversion", "https://healthcare.utah.edu/hmhi/programs/crisis-diversion/988"],
+      "availability_verified": "2026-10-07"
+    },
+    {
+      "organization": "Huntsman Mental Health Institute (HMHI)",
+      "program": "Utah Warm Line",
+      "specializes_in": ["peer support", "emotional support", "mental-health recovery support", "substance-use recovery support"],
+      "services": "Free, non-crisis peer support from certified peer support specialists who use empathetic listening and recovery-oriented encouragement.",
+      "format_and_location": "Phone; available to Utah residents 8 a.m. to 11 p.m. daily.",
+      "cost": "Free",
+      "eligibility": "Utah residents seeking non-crisis peer connection and support.",
+      "how_to_connect": "Call the Utah Warm Line. If there is immediate danger or a crisis, call or text 988 instead; call 911 for immediate danger or a medical emergency.",
+      "contact": {"toll_free_phone": "833-773-2588", "local_phone": "801-587-1055", "website": "https://healthcare.utah.edu/hmhi/programs/crisis-diversion"},
+      "source_urls": ["https://healthcare.utah.edu/hmhi/programs/crisis-diversion"],
+      "availability_verified": "2026-10-07"
+    },
+    {
       "organization": "988 Suicide & Crisis Lifeline",
       "program": "24/7 Crisis Support",
       "specializes_in": ["suicide prevention", "mental-health crisis intervention", "emotional crisis support"],
@@ -563,7 +592,7 @@
       "description": "Support groups, therapy, care navigation, and emotional-support lines for postpartum or perinatal mental-health needs.",
       "resources": [
         {"organization": "The Healing Group", "program": "Free Postpartum Support Group"},
-        {"organization": "Huntsman Mental Health Institute, University of Utah Health", "program": "Perinatal Mental Health Services and Free Perinatal Support Group"},
+        {"organization": "Huntsman Mental Health Institute, University of Utah Health", "program": "Perinatal Mental Health Services and Virtual Perinatal Mindfulness Drop-In Class"},
         {"organization": "New Beginnings Behavioral Health", "program": "Free Postpartum Support Group"},
         {"organization": "Roots and Branches Wellness", "program": "Perinatal Education and Support Group"},
         {"organization": "Treat Counseling", "program": "Free Pregnancy and Postpartum Support Group"},
@@ -573,14 +602,16 @@
         {"organization": "Utah Department of Health and Human Services", "program": "Utah Maternal Mental Health Referral Network"},
         {"organization": "Health Resources and Services Administration (HRSA)", "program": "National Maternal Mental Health Hotline"},
         {"organization": "Huntsman Mental Health Institute, University of Utah Health", "program": "Nest Intensive Outpatient Program"},
-        {"organization": "988 Suicide & Crisis Lifeline", "program": "24/7 Crisis Support"}
+        {"organization": "988 Suicide & Crisis Lifeline", "program": "24/7 Crisis Support"},
+        {"organization": "Huntsman Mental Health Institute (HMHI)", "program": "Mobile Crisis Outreach Teams (MCOT)"},
+        {"organization": "Huntsman Mental Health Institute (HMHI)", "program": "Utah Warm Line"},
+        {"organization": "Intermountain Health", "program": "Behavioral Health Navigation"}
       ]
     },
     {
       "service_type": "Postpartum adjustment, health, and specialized support",
       "description": "Postpartum education, breastfeeding and medication-safety information, and support after adoption placement.",
       "resources": [
-        {"organization": "Intermountain Health", "program": "Beyond Birth: 4th Trimester Support"},
         {"organization": "Utah Women, Infants, and Children (WIC)", "program": "Utah WIC Program"},
         {"organization": "MotherToBaby", "program": "Medication and Exposure Information Service"},
         {"organization": "Life After Placement", "program": "Birth-Mother Support After Adoption Placement"},
@@ -632,4 +663,3 @@
     "The Emily Effect's 2016 support-group page was not used as a standalone source for current schedules. A group was included only when its current provider or PSI Utah listing verified availability."
   ]
 }
-
